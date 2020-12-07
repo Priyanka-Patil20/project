@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <body>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),   url(https://i.pinimg.com/originals/93/b3/a9/93b3a93bca9c7655e887d4717e357433.jpg) ;
+                background-position:center;
+                background-size: cover;
+                background-attachment: fixed;
+
+            }
+            h1{
+                text-align: center;
+                color: aliceblue;
+                margin-top: 50px;
+               
+            }
+            .container{
+                text-align: center;
+                margin-top: 200px;  
+            }
+            .btn{
+                border: 1px solid #3498db;
+                background: none;
+                padding: 10px 20px;
+                font-size:20px;
+                cursor: pointer;
+                margin: 10px;
+                transition: 0.8s;
+                position: relative;
+                overflow: hidden;
+            }
+            .btn1, .btn2{
+                color:#3498db;
+
+            }
+            .btn3, .btn4{
+                color: #fff;
+
+            }
+            .btn1:hover, .btn2:hover{
+                color: #fff;
+
+            }
+            .btn3:hover,.btn4:hover{
+                color: #3498db;
+            }
+            .btn::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background: #3498db;
+                z-index: -1;
+                transition: 0.8s;
+            }
+            .btn1::before, .btn3::before{
+                top: 0;
+                border-radius:0 0 50% 50%;
+            }
+            .btn2::before, .btn4::before{
+                bottom: 0;
+                border-radius: 50% 50% 0 0;
+            }
+            .btn3::before, .btn4::before{
+                height: 180%;
+            }
+            .btn1:hover::before, .btn2:hover::before{
+                height: 180%;
+           
+            }
+            .btn3:hover::before, .btn4:hover::before{
+                height: 0%;
+            }
+         
+        </style>
+           
+     
+    <body>
+        <h1>Details for faculty</h1>
+        <div class="container">
+            <button class="btn btn1" onclick="location.href='UpdateFaculty.jsp'">Update Profile</button>
+            <button class="btn btn2" onclick="location.href='AddQuestion.jsp'">Add Que</button>
+            <button class="btn btn3" onclick="location.href='showquestions'">Show Que</button>
+            <button class="btn btn4" onclick="location.href='viewresult'">Show Result</button>
+        </div>
+
+    </body>
+
+
+
+
+</html>
